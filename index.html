@@ -13,11 +13,11 @@
 </head>
 
 <body>
+
   <div>
-      <div>
     <!--Navigation Bar-->
-    <nav class="navbar navbar-expand-sm nav-colour" id="navAll">
-      <div id="navMain" class="row">
+    <nav class="navbar navbar-expand-sm nav-colour" id="">
+      <div id="navMain" class="row navContainer">
 
         <!--Navbar Logo-->
         <div style="height: 50px;">
@@ -27,7 +27,7 @@
         </div>
 
         <!--Hamburger Menu-->
-        <div id="menu" class="d-md-none">
+        <div id="menu" class="d-lg-none">
           <div id="menu-bar" onclick="menuOnClick()">
             <div id="bar1" class="bar"></div>
             <div id="bar2" class="bar"></div>
@@ -41,27 +41,20 @@
               <li><a href="membership.html">Membership</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div style="float: right;" class="social-buttons" id="hamSocial">
-              <a href="mail:to Aidan.Boxall@NCCLondon.ac.uk" class="social-button social-button--mail" aria-label="Mail" id="social1">
-                <i class="fa fa-envelope"></i>
-              </a>
-              <a href="https://www.facebook.com/groups/163025854213387/" class="social-button social-button--facebook" aria-label="Facebook" id="social1">
-                <i class="fa fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-button social-button--linkedin" aria-label="LinkedIn" id="social1">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-              <a href="#" class="social-button social-button--instagram" aria-label="Instagram" id="social1">
-                <i class="fa fa-instagram"></i>
-              </a>
-              
+            <div id="hamIcon">
+              <button class="social-button social-button--mail" aria-label="Mail" onclick="copyEmail()" id="social2">
+                  <i class="fa fa-envelope" style="margin-bottom: 10px;"></i>  
+                </button>
+                <button class="social-button social-button--facebook" aria-label="Facebook" id="social2" onclick="window.open('https://www.facebook.com/groups/163025854213387/', '_blank');">
+                  <i class="fa fa-facebook-f" style="margin-bottom: 10px;"></i>
+                </button>
             </div>
           </nav> 
         </div>
         <div class="menu-bg" id="menu-bg"></div>
 
         <!--Navbar Links-->
-        <div class="d-none d-md-block" style="height: 50px;">
+        <div class="d-none d-lg-block" style="height: 50px;" id="navLinks">
           <ul class="navbar-nav">
             <li style="height: 30px; ">
                 <a href="index.html">
@@ -69,15 +62,9 @@
                 </a>
             </li>
             <li style="height: 30px; ">
-              <div class="dropdown">
-                <button class="dropbtn">About</button>
-                <div class="dropdown-content">
-                  <a href="about.html">Vision & Mission</a>
-                  <a href="about.html">Legal Entity</a>
-                  <a href="about.html">Board</a>
-                  <a href="about.html">Participating Schools</a>
-                </div>
-              </div>
+                <a href="about.html">
+                  <h6 class="navbarItem">About</h6>
+                </a>
             </li>
             <li style="height: 30px; ">
                 <a href="meetings.html">
@@ -96,20 +83,13 @@
             </li>
           </ul>
         </div>
-        <div class="social-buttons" id="navSocial">
-          <a href="mail:to Aidan.Boxall@NCCLondon.ac.uk" class="social-button social-button--mail" aria-label="Mail" id="social2">
-            <i class="fa fa-envelope"></i>
-          </a>
-          <a href="https://www.facebook.com/groups/163025854213387/" class="social-button social-button--facebook" aria-label="Facebook" id="social2">
+        <div class="social-buttons">
+          <button class="social-button social-button--mail" aria-label="Mail" onclick="copyEmail()" id="social2">
+            <i class="fa fa-envelope" style="margin-bottom: 10px;"></i>  
+          </button>
+          <a href="https://www.facebook.com/groups/163025854213387/" class="social-button social-button--facebook" aria-label="Facebook" id="social2" target="_blank">
             <i class="fa fa-facebook-f"></i>
           </a>
-          <a href="#" class="social-button social-button--linkedin" aria-label="LinkedIn" id="social2">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a href="#" class="social-button social-button--instagram" aria-label="Instagram" id="social2">
-            <i class="fa fa-instagram"></i>
-          </a>
-          
         </div>
       </div>
       
@@ -117,7 +97,7 @@
   </div>
 
   <!--Main Content-->
-  <div class="container-lg" id="containerMain">
+  <div class="container-lg mainContainer" id="containerMain">
     <h2 style="text-align: center;">Who are we?</h2>
     <br>
     <img src="images/moveslogo_v2.png" alt="moves logo" id="movesImg">
