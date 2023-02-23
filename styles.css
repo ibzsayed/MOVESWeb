@@ -180,7 +180,7 @@ ul li ul li {
     margin: 60px 0px 20px 20px;
     background: radial-gradient(circle, rgb(0, 85, 141), rgb(0, 85, 141));
     border-radius: 50%;
-    transition: 0.3s ease;
+    transition: 0.45s ease;
 }
 .change {
     display: block;
