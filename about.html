@@ -11,13 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Josefin+Sans:wght@700&family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/923a28d201.js" crossorigin="anonymous"></script>
 </head>
-<style>
-</style>
+
 <body>
+
   <div>
     <!--Navigation Bar-->
-    <nav class="navbar navbar-expand-sm nav-colour" id="navAll">
-      <div id="navMain" class="row">
+    <nav class="navbar navbar-expand-sm nav-colour" id="">
+      <div id="navMain" class="row navContainer">
 
         <!--Navbar Logo-->
         <div style="height: 50px;">
@@ -27,7 +27,7 @@
         </div>
 
         <!--Hamburger Menu-->
-        <div id="menu" class="d-md-none">
+        <div id="menu" class="d-lg-none">
           <div id="menu-bar" onclick="menuOnClick()">
             <div id="bar1" class="bar"></div>
             <div id="bar2" class="bar"></div>
@@ -41,27 +41,20 @@
               <li><a href="membership.html">Membership</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
-            <div style="float: right;" class="social-buttons" id="hamSocial">
-              <a href="mail:to Aidan.Boxall@NCCLondon.ac.uk" class="social-button social-button--mail" aria-label="Mail" id="social1">
-                <i class="fa fa-envelope"></i>
-              </a>
-              <a href="https://www.facebook.com/groups/163025854213387/" class="social-button social-button--facebook" aria-label="Facebook" id="social1">
-                <i class="fa fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-button social-button--linkedin" aria-label="LinkedIn" id="social1">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-              <a href="#" class="social-button social-button--instagram" aria-label="Instagram" id="social1">
-                <i class="fa fa-instagram"></i>
-              </a>
-              
+            <div id="hamIcon">
+              <button class="social-button social-button--mail" aria-label="Mail" onclick="copyEmail()" id="social2">
+                  <i class="fa fa-envelope" style="margin-bottom: 10px;"></i>  
+                </button>
+                <button class="social-button social-button--facebook" aria-label="Facebook" id="social2" onclick="window.open('https://www.facebook.com/groups/163025854213387/', '_blank');">
+                  <i class="fa fa-facebook-f" style="margin-bottom: 10px;"></i>
+                </button>
             </div>
           </nav> 
         </div>
         <div class="menu-bg" id="menu-bg"></div>
 
         <!--Navbar Links-->
-        <div class="d-none d-md-block" style="height: 50px;">
+        <div class="d-none d-lg-block" style="height: 50px;" id="navLinks">
           <ul class="navbar-nav">
             <li style="height: 30px; ">
                 <a href="index.html">
@@ -69,15 +62,9 @@
                 </a>
             </li>
             <li style="height: 30px; ">
-              <div class="dropdown">
-                <button class="dropbtn">About</button>
-                <div class="dropdown-content">
-                  <a href="about.html">Vision & Mission</a>
-                  <a href="about.html">Legal Entity</a>
-                  <a href="about.html">Board</a>
-                  <a href="about.html">Participating Schools</a>
-                </div>
-              </div>
+                <a href="about.html">
+                  <h6 class="navbarItem">About</h6>
+                </a>
             </li>
             <li style="height: 30px; ">
                 <a href="meetings.html">
@@ -96,145 +83,26 @@
             </li>
           </ul>
         </div>
-        <div class="social-buttons" id="navSocial">
-          <a href="mail:to Aidan.Boxall@NCCLondon.ac.uk" class="social-button social-button--mail" aria-label="Mail" id="social2">
-            <i class="fa fa-envelope"></i>
-          </a>
-          <a href="https://www.facebook.com/groups/163025854213387/" class="social-button social-button--facebook" aria-label="Facebook" id="social2">
+        <div class="social-buttons">
+          <button class="social-button social-button--mail" aria-label="Mail" onclick="copyEmail()" id="social2">
+            <i class="fa fa-envelope" style="margin-bottom: 10px;"></i>  
+          </button>
+          <a href="https://www.facebook.com/groups/163025854213387/" class="social-button social-button--facebook" aria-label="Facebook" id="social2" target="_blank">
             <i class="fa fa-facebook-f"></i>
-          </a>
-          <a href="#" class="social-button social-button--linkedin" aria-label="LinkedIn" id="social2">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-          <a href="#" class="social-button social-button--instagram" aria-label="Instagram" id="social2">
-            <i class="fa fa-instagram"></i>
           </a>
         </div>
       </div>
       
-  </nav>
+    </nav>
   </div>
 
   <!--Main Content-->
-  <div class="container-lg" id="containerMain">
-    <h2 style="text-align: center;">About Us</h2>
+  <div class="container-lg mainContainer" id="containerMain">
+    <h2 style="text-align: center;">Who are we?</h2>
     <br>
-    <p>
-      <a class="btn" id="vision2" data-toggle="collapse" href="#vision" role="button" aria-expanded="false" aria-controls="vision">
-        Vision and mission
-      </a>
-    </p>
-    <div class="collapse" id="vision">
-      <div class="card card-body">
-        <h2>Mission (23-11-2017)</h2>
-        <p>MOVES is an European Non-Governmental Organisation for schools in sports and exercise, primarily on the Vocational Education Training level. This network focuses on improving the quality of education by providing an international experience. MOVES includes all parties in the educational system in its activities; heads of schools, teachers, students and employers</p>
-        <br>
-        <h2>Vision (23-11-2017)</h2>
-        <p>It is the ambition of MOVES to share information between the schools of the network on an international level
-        <br> By sharing knowledge, skills and competencies
-        <br> By encouraging exchange possibilities of teachers & students
-        <br> By sharing information about the educational systems in different countries
-        <br> By setting up a communication system between the different members of the network
-        <br> By sharing teaching methods and national work placement networks
-        <br> By organising an annual conference for heads of schools, teachers, students & employers</p>
-
-      </div>
-    </div>
-
-    <p style="padding-top: 10px;">
-      <a class="btn" id="legal2" data-toggle="collapse" href="#legal" role="button" aria-expanded="false" aria-controls="legal">
-        Legal Entity
-      </a>
-    </p>
-    <div class="collapse" id="legal">
-      <div class="card card-body">
-        Legal Entity
-      </div>
-    </div>
-
-    <p style="padding-top: 10px;">
-      <a class="btn" id="board2" data-toggle="collapse" href="#board" role="button" aria-expanded="false" aria-controls="board">
-        Board
-      </a>
-    </p>
-    <div class="collapse" id="board">
-      <div class="card card-body">
-        Board
-      </div>
-    </div>
-
-    <p style="padding-top: 10px;">
-      <a class="btn" id="schools2" data-toggle="collapse" href="#schools" role="button" aria-expanded="false" aria-controls="schools">
-        Participating schools
-      </a>
-    </p>
-    <div class="collapse" id="schools">
-      <div class="card card-body">
-        <div class="container">
-          <div class="card">
-            <div class="box">
-              <div class="content">
-                <h2>01</h2>
-                <h3>CIOS Goes</h3>
-                <p>Goes, Netherlands</p>
-                <a href="http://www.movesnetwork.com/assets/moves-partner-information-cios-goes.pdf" target="_blank">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <div class="content">
-                <h2>02</h2>
-                <h3>Escola Profissional de Estudos Téchnicos</h3>
-                <p>Lisbon, Portugal</p>
-                <a href="http://www.movesnetwork.com/assets/moves-partner-information-epet.pdf" target="_blank">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <div class="content">
-                <h2>03</h2>
-                <h3>Florida Grup Educatiu</h3>
-                <p>Valencia, Spain</p>
-                <a href="http://www.movesnetwork.com/assets/moves-partner-information_101018.pdf"  target="_blank">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <div class="content">
-                <h2>04</h2>
-                <h3>ROC Mondriaan Lifestyle, Sport en Bewegen</h3>
-                <p>Delft/The Hague, Netherlands</p>
-                <a href="http://www.movesnetwork.com/assets/moves-partner-information-school-for-lse-roc-mondriaan-delft.pdf" target="_blank">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <div class="content">
-                <h2>05</h2>
-                <h3>New City College</h3>
-                <p>London, England</p>
-                <a href="https://www.ncclondon.ac.uk/course-subject/sport-and-fitness" target="_blank">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <div class="content">
-                <h2>06</h2>
-                <h3>The Sport Institute of Finland</h3>
-                <p>Helsinki, Finland</p>
-                <a href="http://www.movesnetwork.com/assets/moves-partner-information-sif.pdf" target="_blank">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <img src="images/moveslogo_v2.png" alt="moves logo" id="movesImg">
+    <p id="movesPara">MOVES, mobility in vocational education in sports, is a leading provider for vocational courses in sports education.</p>
+  </div>
   </div>
 
   <!--JavaScript-->
